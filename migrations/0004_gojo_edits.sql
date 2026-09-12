@@ -1,0 +1,108 @@
+-- bombom house channel + Gojo edits pulled from YouTube and TikTok.
+insert into profiles (user_id, handle, display_name, bio, avatar_url, is_seed)
+values
+  ('seed-bombom', 'bombom', 'bombom', 'Edits, AMVs, and the house feed.', '/avatars/bombom.svg', true),
+  ('seed-molob', 'molob', 'Molob', 'YouTube editor. After Effects cuts and audio hits.', '/avatars/molob.svg', true),
+  ('seed-gojoamv', 'gojoamv', 'GOJO神', 'JJK AMVs. Big swings, no filler.', '/avatars/gojoamv.svg', true),
+  ('seed-paitan', 'paitan', 'Paitan', '4K character AMVs. Slow cuts, heavy songs.', '/avatars/paitan.svg', true),
+  ('seed-animexz', 'animexz', 'Anime xz', 'Short-form manga and anime edits.', '/avatars/animexz.svg', true),
+  ('seed-dntlesm', 'dntlesm', 'DNTLESM', 'Season-drop AMVs.', '/avatars/dntlesm.svg', true),
+  ('seed-muyox', 'muyox', 'MuyoXplosion', 'Cinematic 4K Gojo cuts.', '/avatars/muyox.svg', true),
+  ('seed-smooke', 'smookecut', 'SmookeCut', 'TikTok Gojo edits. Fast, loud, looping.', '/avatars/smooke.svg', true),
+  ('seed-rebi', 'rebiedits', 'rebi.edits0', 'TikTok SatoSugu 4K edits.', '/avatars/rebi.svg', true),
+  ('seed-hakai', 'hakaiclips', 'HakaiClips', 'TikTok Gojo clips and phonk cuts.', '/avatars/hakai.svg', true)
+on conflict (user_id) do nothing;
+
+insert into videos (id, user_id, title, description, tags, src_url, poster_url, duration_sec, is_short, status, view_count, like_count, comment_count, created_at)
+values
+  ('v-gojo-smile', 'seed-paitan', 'Die With a Smile — Gojo x Geto',
+   '4K AMV from YouTube. Lady Gaga & Bruno Mars over Hidden Inventory. Original by Paitan.',
+   'gojo,geto,amv,youtube,jjk',
+   'https://www.youtube.com/watch?v=MWIKtEdxKgY',
+   'https://i.ytimg.com/vi/MWIKtEdxKgY/hqdefault.jpg',
+   90, false, 'published', 2512000, 542000, 0, now() - interval '90 minutes'),
+  ('v-gojo-greatest', 'seed-gojoamv', 'The greatest Gojo edit',
+   'YouTube AMV by GOJO神. A TikTok trend stretched into a full cut.',
+   'gojo,edit,youtube,amv,jjk',
+   'https://www.youtube.com/watch?v=CbQG-QFpofA',
+   'https://i.ytimg.com/vi/CbQG-QFpofA/hqdefault.jpg',
+   81, false, 'published', 615500, 26600, 0, now() - interval '2 hours'),
+  ('v-gojo-epic', 'seed-gojoamv', 'Gojo vs Sukuna — epic cut',
+   'YouTube AMV by GOJO神. The fight, scored, no phonk this time.',
+   'gojo,sukuna,youtube,amv,jjk',
+   'https://www.youtube.com/watch?v=h58BATHqqiE',
+   'https://i.ytimg.com/vi/h58BATHqqiE/hqdefault.jpg',
+   207, false, 'published', 422000, 29200, 0, now() - interval '3 hours'),
+  ('v-gojo-wutiwant', 'seed-muyox', 'Gojo Satoru — wutiwant',
+   '4K YouTube AMV by MuyoXplosion. Limitless, Jogo, Hanami, then the smirk.',
+   'gojo,youtube,amv,jjk,4k',
+   'https://www.youtube.com/watch?v=9DIMnKvDHTs',
+   'https://i.ytimg.com/vi/9DIMnKvDHTs/hqdefault.jpg',
+   97, false, 'published', 26600, 1500, 0, now() - interval '4 hours'),
+  ('s-gojo-popular', 'seed-molob', 'Gojo — Popular',
+   'YouTube edit by Molob. The Weeknd / Playboi Carti / Madonna. Thirty seconds of the strongest.',
+   'gojo,youtube,edit,drop,jjk',
+   'https://www.youtube.com/watch?v=_CThHMQZVlo',
+   'https://i.ytimg.com/vi/_CThHMQZVlo/hqdefault.jpg',
+   30, true, 'published', 842200, 30600, 0, now() - interval '40 minutes'),
+  ('s-gojo-ep4', 'seed-dntlesm', 'Gojo Satoru — season 2 ep 4',
+   'YouTube AMV by DNTLESM. Hidden Inventory in thirteen seconds.',
+   'gojo,youtube,edit,drop,jjk',
+   'https://www.youtube.com/watch?v=oiPETzzT3Vs',
+   'https://i.ytimg.com/vi/oiPETzzT3Vs/hqdefault.jpg',
+   13, true, 'published', 208100, 18100, 0, now() - interval '50 minutes'),
+  ('s-gojo-gota', 'seed-gojoamv', 'GOTA SATOTSU',
+   'YouTube short by GOJO神. Chapter 261 energy, vertical.',
+   'gojo,youtube,edit,drop,jjk',
+   'https://www.youtube.com/watch?v=ku-eKnWP9Kk',
+   'https://i.ytimg.com/vi/ku-eKnWP9Kk/hqdefault.jpg',
+   36, true, 'published', 351600, 17900, 0, now() - interval '70 minutes'),
+  ('s-gojo-badass', 'seed-animexz', 'Gojo Satoru — badass short',
+   'YouTube Shorts cut by Anime xz. Eight million loops of the strongest.',
+   'gojo,youtube,shorts,drop,jjk',
+   'https://www.youtube.com/shorts/bUTrBAL3Vuc',
+   'https://i.ytimg.com/vi/bUTrBAL3Vuc/hqdefault.jpg',
+   19, true, 'published', 8200000, 362600, 0, now() - interval '25 minutes'),
+  ('s-tt-smooke1', 'seed-smooke', 'Satoru Gojo — TikTok cut',
+   'From TikTok @smookecut. 2.7M loops. Baboon over Infinity.',
+   'gojo,tiktok,edit,drop,jjk',
+   'https://www.tiktok.com/@smookecut/video/7637676783034289429',
+   '/posters/tt-7637676783034289429.jpg',
+   16, true, 'published', 2700000, 387500, 0, now() - interval '15 minutes'),
+  ('s-tt-rebi', 'seed-rebi', 'Satoruu — Geto and Gojo',
+   'From TikTok @rebi.edits0. 4K 60fps SatoSugu.',
+   'gojo,geto,tiktok,edit,drop,jjk',
+   'https://www.tiktok.com/@rebi.edits0/video/7620073903657962772',
+   '/posters/tt-7620073903657962772.jpg',
+   22, true, 'published', 1700000, 387100, 0, now() - interval '18 minutes'),
+  ('s-tt-smooke2', 'seed-smooke', 'Jujutsu edit — Satoru Gojo',
+   'From TikTok @smookecut. Tight cuts, original sound.',
+   'gojo,tiktok,edit,drop,jjk',
+   'https://www.tiktok.com/@smookecut/video/7554889276417133835',
+   '/posters/tt-7554889276417133835.jpg',
+   20, true, 'published', 1900000, 286400, 0, now() - interval '22 minutes'),
+  ('s-tt-hakai', 'seed-hakai', 'PRÓXIMO — Satoru Gojo',
+   'From TikTok @hakai_clips. “Is there anything you are not able to do?”',
+   'gojo,tiktok,edit,drop,jjk',
+   'https://www.tiktok.com/@hakai_clips/video/7457583147467820293',
+   '/posters/tt-7457583147467820293.jpg',
+   63, true, 'published', 512800, 61500, 0, now() - interval '35 minutes')
+on conflict (id) do nothing;
+
+insert into comments (id, video_id, user_id, body, status, created_at)
+values
+  ('cg1', 'v-gojo-smile', 'seed-rebi', 'This song on those two is illegal.', 'visible', now() - interval '40 minutes'),
+  ('cg2', 'v-gojo-smile', 'seed-molob', 'The hold on 0:48. I felt that.', 'visible', now() - interval '20 minutes'),
+  ('cg3', 's-gojo-badass', 'seed-smooke', 'Shorts algorithm fodder and I am not sorry.', 'visible', now() - interval '12 minutes'),
+  ('cg4', 's-tt-smooke1', 'seed-animexz', 'TikTok to bombom. Still slaps.', 'visible', now() - interval '8 minutes'),
+  ('cg5', 'v-gojo-epic', 'seed-paitan', 'Finally an AMV that lets the OST breathe.', 'visible', now() - interval '1 hour')
+on conflict (id) do nothing;
+
+insert into follows (follower_id, creator_id)
+values
+  ('seed-bombom', 'seed-molob'),
+  ('seed-bombom', 'seed-gojoamv'),
+  ('seed-bombom', 'seed-paitan'),
+  ('seed-smooke', 'seed-rebi'),
+  ('seed-animexz', 'seed-molob')
+on conflict do nothing;

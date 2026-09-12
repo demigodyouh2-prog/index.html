@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "bombom",
+      "hasCanvas": false,
+      "bodyTextLen": 1908,
+      "bodyTextHash": "ce1b77ff2fcfda5310e26ab726e4e5b016a0f801ed6b090e3ed848a6c633012e",
+      "bodyTextPrefix": "bombom EDITS Post Home Drop Post Guard You FEATURED YOUTUBE Die ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "bombom",
+      "hasCanvas": false,
+      "bodyTextLen": 1905,
+      "bodyTextHash": "83be5292046125ac600c2907be03ffea51fc9a2aa674452cefd123f243733f81",
+      "bodyTextPrefix": "bombom Sign in FEATURED YOUTUBE Die With a Smile — Gojo x Geto P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

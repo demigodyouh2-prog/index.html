@@ -1,0 +1,42 @@
+export const STOCK_CLIPS = [
+  {
+    id: "cliff",
+    title: "Cliff swell",
+    src: "/shorts/cliff-swell.mp4",
+    poster: "/posters/cliff-swell.jpg",
+    isShort: true,
+    duration: 6,
+  },
+  {
+    id: "blazes",
+    title: "High desert firelight",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+    isShort: true,
+    duration: 15,
+  },
+  {
+    id: "joyrides",
+    title: "Late light joyride",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg",
+    isShort: false,
+    duration: 15,
+  },
+  {
+    id: "escapes",
+    title: "Escapes",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg",
+    isShort: false,
+    duration: 15,
+  },
+  {
+    id: "bunny",
+    title: "Open movie clip",
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    poster: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+    isShort: false,
+    duration: 596,
+  },
+] as const;
